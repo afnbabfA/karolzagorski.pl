@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      showToast('✓ Pobrano wizytówkę (.vcf) — otwórz plik, by zapisać kontakt w telefonie');
+      showToast('✓ Downloaded vCard (.vcf) — open to save contact directly');
     });
   }
 
@@ -92,14 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
         `DTSTAMP:${dtStamp}`,
         `DTSTART:${dtStart}`,
         `DTEND:${dtEnd}`,
-        'SUMMARY:Napisz do: lek. Karol Zagórski (ECP 2026 / Badania)',
-        'DESCRIPTION:Przypomnienie o kontakcie w sprawie współpracy naukowej.\\n\\nLek. Karol Zagórski\\nRezydent patomorfologii, Uniwersytet Medyczny we Wrocławiu\\nEmail: karol.zagorski.md@gmail.com\\nStrona: https://karolzagorski.pl\\nTemat ECP 2026: Hybrydowe sieci kwantowo-klasyczne w czerniaku naczyniówki.',
-        'LOCATION:Stockholm / Online',
+        'SUMMARY:Follow up with Karol Zagórski, MD (ECP 2026 / Research)',
+        'DESCRIPTION:Follow up regarding scientific collaboration & research.\\n\\nKarol Zagórski, MD\\nResident in Anatomic Pathology, Wroclaw Medical University\\nEmail: karol.zagorski.md@gmail.com\\nWebsite: https://karolzagorski.pl\\nECP 2026 Talk: Hybrid quantum-classical neural networks for uveal melanoma prognosis via WSI.',
+        'LOCATION:Stockholmsmässan, Stockholm / Online',
         'STATUS:CONFIRMED',
         'BEGIN:VALARM',
         'TRIGGER:-PT0M',
         'ACTION:DISPLAY',
-        'DESCRIPTION:Przypomnienie: kontakt z lek. Karolem Zagórskim',
+        'DESCRIPTION:Reminder: Follow up with Karol Zagórski, MD',
         'END:VALARM',
         'END:VEVENT',
         'END:VCALENDAR'
@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'Przypomnienie_Karol_Zagorski.ics';
+      a.download = 'Karol_Zagorski_Reminder.ics';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      showToast('✓ Dodano przypomnienie (.ics) — kliknij, by zapisać w kalendarzu na 21:00');
+      showToast('✓ Downloaded reminder (.ics) — open to set calendar alert for 21:00');
     });
   }
 });
