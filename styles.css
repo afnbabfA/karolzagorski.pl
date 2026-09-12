@@ -1,0 +1,491 @@
+/* ==========================================================================
+   KAROL ZAGÓRSKI, MD — CLASSICAL ACADEMIC DESIGN SYSTEM
+   Inspiration: Classic European/US Academic Homepages (Oxford, MIT, Princeton)
+   ========================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #f9fafb;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --text-faint: #6b7280;
+  
+  --border-color: #e5e7eb;
+  --border-dark: #d1d5db;
+  
+  --accent-link: #1d4ed8;
+  --accent-link-hover: #0f2b82;
+
+  --font-serif: 'Newsreader', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+
+/* Reset & Basics */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
+}
+
+body {
+  min-height: 100vh;
+  padding: 48px 20px 80px;
+}
+
+/* Page Container (Academic 720px golden reading width) */
+.page-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Header & Profile */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.profile-intro {
+  flex: 1;
+}
+
+.profile-name {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.profile-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.profile-affil {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+
+.profile-links a {
+  color: var(--accent-link);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+  color: var(--accent-link-hover);
+}
+
+.sep {
+  color: var(--border-dark);
+  user-select: none;
+}
+
+/* Profile Photo */
+.profile-photo-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Divider */
+.divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 28px 0 32px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.text-p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.65;
+}
+
+.text-p strong {
+  color: var(--text-main);
+}
+
+/* Featured / Upcoming Box */
+.featured-box {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--text-main);
+  padding: 18px 20px;
+  border-radius: 2px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.item-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #e0e7ff;
+  color: #1e3a8a;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.item-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+}
+
+.item-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.item-authors {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.item-venue {
+  font-size: 0.88rem;
+  color: var(--text-faint);
+  line-height: 1.45;
+}
+
+/* Lists */
+.clean-list {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.clean-list li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+.clean-list strong {
+  color: var(--text-main);
+}
+
+.pub-numbered-list {
+  padding-left: 20px;
+}
+
+.pub-item {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+.pub-item strong {
+  color: var(--text-main);
+}
+
+.pub-item em {
+  color: var(--text-main);
+}
+
+/* Contact Details */
+.contact-details {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  border-radius: 2px;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.contact-details a {
+  color: var(--accent-link);
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.page-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+  margin-top: 50px;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+/* Quick Networking Card / Digital Business Card */
+.networking-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin: 20px 0 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.networking-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  display: inline-block;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.75; }
+}
+
+.networking-tag {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: #475569;
+  letter-spacing: 0.02em;
+}
+
+.quick-actions-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.15s ease-in-out;
+  text-align: left;
+  user-select: none;
+  min-height: 52px;
+}
+
+.btn-action:active {
+  transform: scale(0.98);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.btn-labels {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.btn-label-primary {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.btn-label-sub {
+  font-size: 0.72rem;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Button Variants */
+.btn-primary {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+.btn-primary:hover {
+  background: #1e293b;
+  border-color: #1e293b;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+.btn-secondary:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-tertiary {
+  background: #ffffff;
+  color: #1e3a8a;
+  border-color: #cbd5e1;
+}
+.btn-tertiary:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1e3a8a;
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.08);
+}
+
+/* Toast Message */
+.toast-message {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #047857;
+  font-weight: 500;
+  display: none;
+  padding: 8px 12px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 4px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+.toast-message.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  body {
+    padding: 24px 16px 60px;
+  }
+
+  .profile-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-name {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+
+  .profile-title {
+    font-size: 0.98rem;
+  }
+
+  .profile-affil {
+    font-size: 0.88rem;
+  }
+
+  .profile-links {
+    font-size: 0.88rem;
+    gap: 6px;
+    word-break: break-word;
+  }
+
+  .quick-actions-bar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .btn-action {
+    min-height: 48px;
+    padding: 12px 14px;
+  }
+
+  .btn-label-primary {
+    font-size: 0.92rem;
+  }
+
+  .btn-label-sub {
+    font-size: 0.75rem;
+  }
+
+  .item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karol Zagórski, MD — Pathology &amp; Computational Medicine</title>
+  <meta name="description" content="Personal academic homepage of Karol Zagórski, MD. Resident in anatomic pathology, computational pathology researcher.">
+  
+  <meta property="og:title" content="Karol Zagórski, MD — Pathology &amp; Computational Medicine">
+  <meta property="og:description" content="Resident in Anatomic Pathology &amp; Computational Oncology Researcher. Speaker at ECP 2026 Stockholm.">
+  <meta property="og:image" content="https://karolzagorski.pl/assets/profile.png">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://karolzagorski.pl">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Typography: Newsreader (Classic Academic Serif) & Inter (Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="page-container">
+
+    <!-- HEADER / PROFILE -->
+    <header class="profile-header">
+      <div class="profile-intro">
+        <h1 class="profile-name">Karol Zagórski, MD</h1>
+        <p class="profile-title">
+          Resident in Anatomic Pathology &bull; Computational Oncology Researcher
+        </p>
+        <p class="profile-affil">
+          Department of Clinical and Experimental Pathology, Wroclaw Medical University<br>
+          Department of Pathomorphology, 4th Military Clinical Hospital, Wrocław, Poland
+        </p>
+
+        <nav class="profile-links">
+          <a href="https://www.linkedin.com/in/karol-zagorski-md" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="sep">&bull;</span>
+          <a href="https://orcid.org/0009-0000-3809-3642" target="_blank" rel="noopener noreferrer">ORCID</a>
+          <span class="sep">&bull;</span>
+          <a href="https://www.researchgate.net/profile/Karol-Zagorski" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+          <span class="sep">&bull;</span>
+          <a href="mailto:karol.zagorski.md@gmail.com">karol.zagorski.md@gmail.com</a>
+        </nav>
+      </div>
+
+      <div class="profile-photo-wrapper">
+        <img src="assets/profile.png" alt="Karol Zagórski, MD" class="profile-photo" width="140" height="140">
+      </div>
+    </header>
+
+    <!-- QUICK NETWORKING CARD / DIGITAL BUSINESS CARD -->
+    <section class="networking-card" aria-label="Conference Quick Actions">
+      <div class="networking-badge-row">
+        <span class="live-dot"></span>
+        <span class="networking-tag">ECP 2026 Stockholm &bull; Szybki kontakt konferencyjny</span>
+      </div>
+      <div class="quick-actions-bar">
+        <button id="btn-save-vcf" class="btn-action btn-primary" type="button" aria-label="Zapisz wizytówkę vCard w kontaktach telefonu">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span class="btn-labels">
+            <span class="btn-label-primary">Zapisz kontakt (.vcf)</span>
+            <span class="btn-label-sub">Dodaj do kontaktów w telefonie</span>
+          </span>
+        </button>
+
+        <a href="mailto:karol.zagorski.md@gmail.com?subject=%5BECP%202026%20Collaboration%5D%20Inquiry%20for%20Karol%20Zag%C3%B3rski%2C%20MD&body=Dear%20Dr.%20Zag%C3%B3rski%2C%0A%0AI%20am%20reaching%20out%20following%20your%20presentation/research%20at%20ECP%202026%20in%20Stockholm%20(hybrid%20quantum%20machine%20learning%20in%20pathology).%0A%0AI%20would%20like%20to%20discuss...%0A%0ABest%20regards%2C" class="btn-action btn-secondary" aria-label="Wyślij e-mail z propozycją współpracy">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span class="btn-labels">
+            <span class="btn-label-primary">Współpraca / E-mail</span>
+            <span class="btn-label-sub">Napisz ze wstępnym szkicem</span>
+          </span>
+        </a>
+
+        <button id="btn-reminder-ics" class="btn-action btn-tertiary" type="button" aria-label="Dodaj przypomnienie o kontakcie na 21:00 do kalendarza">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span class="btn-labels">
+            <span class="btn-label-primary">Przypomnij o 21:00</span>
+            <span class="btn-label-sub">Dodaj alarm do kalendarza (.ics)</span>
+          </span>
+        </button>
+      </div>
+      <div id="toast-message" class="toast-message" aria-live="polite"></div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ABOUT SECTION -->
+    <section class="section">
+      <h2 class="section-heading">About</h2>
+      <p class="text-p">
+        I am a medical doctor and resident physician in anatomic pathology (pathomorphology) in Wrocław, Poland. My clinical and academic focus centers on surgical oncopathology, digitized whole-slide imaging (WSI), and translational computational oncology.
+      </p>
+      <p class="text-p">
+        My current research investigates the integration of <strong>quantum-classical hybrid machine learning</strong> algorithms and deep feature extractors for survival prediction and prognostic stratification in rare malignancies, with a particular focus on uveal melanoma.
+      </p>
+    </section>
+
+    <!-- UPCOMING TALK -->
+    <section class="section">
+      <h2 class="section-heading">Upcoming Presentations</h2>
+
+      <div class="item-block featured-box">
+        <div class="item-header">
+          <span class="item-badge">Oral Presentation</span>
+          <span class="item-date">September 13, 2026 &bull; 15:25–15:35</span>
+        </div>
+        <h3 class="item-title">
+          Hybrid quantum-classical neural networks for uveal melanoma prognosis via WSI - preliminary study
+        </h3>
+        <p class="item-authors">
+          <strong>Karol Zagórski</strong>, S. Czerski, A. Markiewicz, B. Romanowska-Dixon, P. Donizy
+        </p>
+        <p class="item-venue">
+          <em>38th European Congress of Pathology (ECP 2026)</em> &bull; Stockholmsmässan, Stockholm, Sweden<br>
+          Session OFP-02: Joint Oral Free Paper Session: Neuropathology &amp; Ophthalmic Pathology (Hall K11)
+        </p>
+      </div>
+    </section>
+
+    <!-- RESEARCH FOCUS -->
+    <section class="section">
+      <h2 class="section-heading">Research &amp; Clinical Interests</h2>
+      <ul class="clean-list">
+        <li>
+          <strong>Computational Pathology &amp; WSI:</strong> Deep learning pipelines for automated histological feature extraction, tumor microenvironment profiling, and risk stratification.
+        </li>
+        <li>
+          <strong>Quantum Machine Learning (QML):</strong> Variational quantum circuits (VQC) and hybrid neural architectures applied to high-dimensional biomedical data.
+        </li>
+        <li>
+          <strong>Ophthalmic &amp; Neural Pathology:</strong> Biomarkers, genomic alterations, and histoprognostic factors in intraocular melanomas and ocular adnexal tumors.
+        </li>
+        <li>
+          <strong>Diagnostic Histopathology:</strong> Routine and specialized diagnostic biopsy assessment, immunohistochemistry, and molecular pathology.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SELECTED PUBLICATIONS -->
+    <section class="section">
+      <h2 class="section-heading">Selected Conference Proceedings &amp; Papers</h2>
+
+      <ol class="pub-numbered-list">
+        <li class="pub-item">
+          <span class="pub-text">
+            <strong>Zagórski K</strong>, Czerski S, Markiewicz A, Romanowska-Dixon B, Donizy P.
+            <em>„Hybrid quantum-classical neural networks for uveal melanoma prognosis via WSI - preliminary study”</em>.
+            Oral presentation at the 38th European Congress of Pathology (ECP 2026), Stockholm, Sweden, September 2026.
+          </span>
+        </li>
+        <li class="pub-item">
+          <span class="pub-text">
+            Pilch J, <strong>Zagórski K</strong>, et al.
+            <em>„FBXW7 expression in uveal melanoma and its prognostic relevance”</em>.
+            Proceedings of the 38th European Congress of Pathology (ECP 2026), Stockholm, Sweden, September 2026.
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section">
+      <h2 class="section-heading">Contact &amp; Networking</h2>
+      <p class="text-p">
+        I am always glad to discuss potential research collaborations, visiting fellowships, computational pathology methodologies, or meet during international conferences.
+      </p>
+
+      <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:karol.zagorski.md@gmail.com">karol.zagorski.md@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/karol-zagorski-md" target="_blank" rel="noopener noreferrer">linkedin.com/in/karol-zagorski-md</a></p>
+        <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0000-3809-3642" target="_blank" rel="noopener noreferrer">0009-0000-3809-3642</a></p>
+        <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Karol-Zagorski" target="_blank" rel="noopener noreferrer">researchgate.net/profile/Karol-Zagorski</a></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <p>&copy; 2026 Karol Zagórski, MD &bull; Wroclaw Medical University</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
