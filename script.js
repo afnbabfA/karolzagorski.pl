@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Generate and Download vCard (.vcf)
   if (btnVcf) {
     btnVcf.addEventListener('click', () => {
+      // Determine active site URL or fallback to https://karolzagorski.pl
+      const currentHost = (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin.startsWith('http'))
+        ? window.location.origin
+        : 'https://karolzagorski.pl';
+
       const vcardData = [
         'BEGIN:VCARD',
         'VERSION:3.0',
@@ -25,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'TITLE:Resident in Anatomic Pathology & Computational Oncology Researcher',
         'ORG:Wroclaw Medical University;Department of Clinical and Experimental Pathology',
         'EMAIL;TYPE=INTERNET,WORK,PREF:karol.zagorski.md@gmail.com',
+        `URL;TYPE=WORK,PREF:${currentHost}`,
         'URL;TYPE=WORK:https://karolzagorski.pl',
+        'URL;TYPE=WORK:https://karolzagorski.eu',
         'X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/karol-zagorski-md',
         'X-SOCIALPROFILE;type=orcid:https://orcid.org/0009-0000-3809-3642',
         'X-SOCIALPROFILE;type=researchgate:https://www.researchgate.net/profile/Karol-Zagorski',
