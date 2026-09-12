@@ -118,4 +118,49 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('✓ Downloaded reminder (.ics) — open to set calendar alert for 21:00');
     });
   }
+
+  // 3. Automatic Conference Lifecycle Transitions
+  // ECP 2026: Oral Talk on Sep 13, 2026 15:25 CEST; Congress concludes on Sep 16, 2026 23:59 CEST
+  const now = new Date();
+  const isPolish = document.documentElement.lang === 'pl';
+
+  // Transition A: After the oral presentation (Sunday Sep 13, 2026 15:35 CEST)
+  const presentationEnd = new Date('2026-09-13T15:35:00+02:00');
+  if (now >= presentationEnd) {
+    const heading = document.querySelector('.section-heading-presentations');
+    if (heading) {
+      heading.textContent = isPolish ? 'Ostatnie wystąpienia' : 'Recent Conference Presentations';
+    }
+    const badge = document.querySelector('.featured-box .item-badge');
+    if (badge) {
+      badge.textContent = isPolish ? 'Wygłoszone na ECP 2026' : 'Presented at ECP 2026';
+    }
+  }
+
+  // Transition B: After the entire congress concludes (September 17, 2026 00:00 CEST)
+  const conferenceEnd = new Date('2026-09-17T00:00:00+02:00');
+  if (now >= conferenceEnd) {
+    const tag = document.querySelector('.networking-tag');
+    if (tag) {
+      tag.textContent = isPolish ? 'Szybki kontakt & Networking' : 'Quick Connect & Academic Networking';
+    }
+    const btnIcs = document.getElementById('btn-reminder-ics');
+    if (btnIcs && btnIcs.parentNode) {
+      const link = document.createElement('a');
+      link.href = 'https://www.linkedin.com/in/karol-zagorski-md';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.className = 'btn-action btn-tertiary';
+      link.setAttribute('aria-label', isPolish ? 'Profil LinkedIn' : 'LinkedIn Profile');
+      link.innerHTML = `
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        <span class="btn-labels">
+          <span class="btn-label-primary">Connect / LinkedIn</span>
+          <span class="btn-label-sub">${isPolish ? 'Śledź publikacje i projekty' : 'Follow research & updates'}</span>
+        </span>
+      `;
+      btnIcs.parentNode.replaceChild(link, btnIcs);
+    }
+  }
 });
+
