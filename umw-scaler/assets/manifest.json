@@ -1,0 +1,19 @@
+{
+ "version": 1,
+ "kdf": "PBKDF2-SHA256",
+ "iterations": 600000,
+ "cipher": "AES-256-GCM (12-byte nonce prefix)",
+ "salt": "fj88H3+Q4hQsCPfDK4iORg==",
+ "app": "assets/a0.enc",
+ "form": "assets/f0.enc",
+ "heads": "assets/h0.enc",
+ "model_json": "assets/m0.enc",
+ "shards": [
+  "assets/s0.enc",
+  "assets/s1.enc",
+  "assets/s2.enc",
+  "assets/s3.enc",
+  "assets/s4.enc",
+  "assets/s5.enc"
+ ]
+}

@@ -1,0 +1,11 @@
+UMW Scaler — research prototype (Research Use Only; not a medical device)
+Wroclaw Medical University. All image analysis runs locally in the user's browser; no data are uploaded.
+
+This site contains files derived from Google Path Foundation (Health AI Developer Foundations, HAI-DEF).
+HAI-DEF is provided under and subject to the Health AI Developer Foundations Terms of Use found at
+https://developers.google.com/health-ai-developer-foundations/terms
+The model files were MODIFIED: the original JAX/TensorFlow SavedModel was re-implemented in plain TensorFlow
+and converted to TensorFlow.js format (numerical equivalence verified, cosine similarity 1.000000).
+Use is subject to the HAI-DEF use restrictions, including the HAI-DEF Prohibited Use Policy.
+
+Third-party libraries: TensorFlow.js 4.22 (Apache-2.0), geotiff.js 2.1.3 (MIT).
