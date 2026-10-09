@@ -2,7 +2,7 @@
 'use strict';
 const I18N = {
   en: {
-    subtitle: 'Uveal Melanoma Wroclaw Scale — research prototype 0.2 · all computation runs on this computer; no data leave your browser',
+    subtitle: 'Uveal Melanoma Wroclaw Scale — research model 1.0 (frozen) · all computation runs on this computer; no data leave your browser',
     gate_title: 'UMW Scaler — restricted preview',
     gate_text: 'This is a non-public research preview. Enter the access password you received from the study team.',
     gate_pw: 'Password', gate_btn: 'Unlock', gate_wrong: 'Wrong password (or files could not be decrypted).',
@@ -47,11 +47,11 @@ const I18N = {
     r_3y: '3 years', r_5y: '5 years', g_low: 'low', g_mid: 'intermediate', g_high: 'high',
     r_qc: 'Quality control', r_qc_txt: 'Green fields on the thumbnail = automatic tumour outline. If the outline is clearly wrong, the result is not reliable.',
     call_loss: 'Confident call: BAP1 loss / monosomy 3 likely', call_retained: 'Confident call: BAP1 retained / disomy 3 likely', call_uncertain: 'Uncertain — molecular testing recommended', call_na: '',
-    call_note: 'Confidence layer: split-conformal prediction (α = 0.10) calibrated on the UMW cohort; on TCGA ~40% of cases received a confident call with ~93% accuracy.', r_art: 'artefact tiles skipped',
+    call_note: 'Confidence layer: split-conformal prediction (α = 0.10) calibrated on the UMW cohort; on TCGA (fully automatic) 31–42% of cases received a confident call, with 94–96% accuracy.', r_art: 'artefact tiles skipped',
     r_tissue: 'tissue tiles', r_tum: 'tumour', r_usedf: 'used for features', r_time: 'time', r_dl: 'Download report (JSON)', r_toform: 'Add to validation form', nav_scaler: 'Analyse slide', nav_form: 'Validation data form', nav_form_note: 'The data form is in English for all centres. Entries stay in this browser until you export a CSV.',
   },
   pl: {
-    subtitle: 'Uveal Melanoma Wroclaw Scale — prototyp badawczy 0.2 · wszystkie obliczenia na tym komputerze, dane nie opuszczają przeglądarki',
+    subtitle: 'Uveal Melanoma Wroclaw Scale — model badawczy 1.0 (zamrożony) · wszystkie obliczenia na tym komputerze, dane nie opuszczają przeglądarki',
     gate_title: 'UMW Scaler — podgląd z ograniczonym dostępem',
     gate_text: 'To niepubliczna wersja badawcza. Wpisz hasło dostępu otrzymane od zespołu badawczego.',
     gate_pw: 'Hasło', gate_btn: 'Odblokuj', gate_wrong: 'Błędne hasło (lub nie udało się odszyfrować plików).',
@@ -95,7 +95,7 @@ const I18N = {
     r_3y: '3 lata', r_5y: '5 lat', g_low: 'niskie', g_mid: 'pośrednie', g_high: 'wysokie',
     r_qc: 'Kontrola jakości', r_qc_txt: 'Zielone pola na miniaturze = automatyczny obrys guza. Jeśli obrys jest wyraźnie błędny, wynik jest niewiarygodny.',
     call_loss: 'Pewne: prawdopodobna utrata BAP1 / monosomia 3', call_retained: 'Pewne: prawdopodobnie BAP1 zachowany / disomia 3', call_uncertain: 'Niepewne — zalecane badanie molekularne', call_na: '',
-    call_note: 'Warstwa niepewności: conformal prediction (α = 0,10) skalibrowana na kohorcie UMW; w TCGA ok. 40% przypadków dostało pewną decyzję z trafnością ok. 93%.', r_art: 'pominięte kafelki-artefakty',
+    call_note: 'Warstwa niepewności: conformal prediction (α = 0,10) skalibrowana na kohorcie UMW; w TCGA (pełny automat) 31–42% przypadków dostało pewną decyzję, z trafnością 94–96%.', r_art: 'pominięte kafelki-artefakty',
     r_tissue: 'kafelki tkanki', r_tum: 'guz', r_usedf: 'użyte do cech', r_time: 'czas', r_dl: 'Pobierz raport (JSON)', r_toform: 'Dodaj do formularza walidacji', nav_scaler: 'Analiza preparatu', nav_form: 'Formularz danych (walidacja)', nav_form_note: 'Formularz jest po angielsku (wspólny dla ośrodków). Wpisy zostają w tej przeglądarce do momentu eksportu CSV.',
   },
 };
