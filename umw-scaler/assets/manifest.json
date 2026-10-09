@@ -3,7 +3,7 @@
  "kdf": "PBKDF2-SHA256",
  "iterations": 600000,
  "cipher": "AES-256-GCM (12-byte nonce prefix)",
- "salt": "iSvECPcKq7CFQI6vsp2x5g==",
+ "salt": "hxzgMUei/6z0OM+P/wxVYA==",
  "app": "assets/a0.enc",
  "form": "assets/f0.enc",
  "heads": "assets/h0.enc",

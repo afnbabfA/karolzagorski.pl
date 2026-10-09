@@ -39,6 +39,13 @@
   .navbtn { padding:9px 16px; border:1px solid transparent; border-bottom:none; border-radius:8px 8px 0 0; background:none; color:var(--muted); cursor:pointer; font-size:15px; }
   .navbtn.on { background:var(--card); border-color:var(--line); color:var(--fg); font-weight:600; margin-bottom:-1px; }
   #formframe { width:100%; border:0; min-height:900px; display:block; }
+  .drop { margin-top: 4px; border: 2px dashed var(--line); border-radius: 10px; padding: 16px 12px; text-align: center; cursor: pointer; font-size: 14px; color: var(--muted); }
+  .drop:hover, .drop.over { border-color: var(--accent); color: var(--fg); background: var(--bg); }
+  .dropname { margin-top: 6px; font-size: 13px; color: var(--fg); word-break: break-all; } .dropname.bad { color: #c5221f; }
+  .conv h3 { margin: 18px 0 6px; font-size: 16px; } .conv h3:first-child { margin-top: 0; } .conv p, .conv li { font-size: 14px; }
+  .conv pre { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; overflow-x: auto; font: 12px/1.45 ui-monospace, Menlo, monospace; white-space: pre; }
+  .conv table { border-collapse: collapse; font-size: 13px; } .conv td, .conv th { border-bottom: 1px solid var(--line); padding: 5px 8px; text-align: left; }
+  .conv button { padding: 7px 12px; border: 0; border-radius: 7px; background: var(--accent); color: #fff; cursor: pointer; margin: 2px 6px 2px 0; }
   .err { color: #c5221f; font-size: 14px; min-height: 1.2em; } .status { color: var(--muted); font-size: 14px; }
 </style>
 </head>
@@ -71,12 +78,13 @@
   <header><h1>UMW Scaler</h1><div class="langs"><button class="langbtn" data-lang="en">EN</button><button class="langbtn" data-lang="pl">PL</button></div></header>
   <p class="sub" data-i18n="subtitle"></p>
   <div class="ruo" data-i18n-html="ruo"></div>
-  <nav class="nav"><button class="navbtn on" data-view="scaler" data-i18n="nav_scaler"></button><button class="navbtn" data-view="form" data-i18n="nav_form"></button></nav>
+  <nav class="nav"><button class="navbtn on" data-view="scaler" data-i18n="nav_scaler"></button><button class="navbtn" data-view="form" data-i18n="nav_form"></button><button class="navbtn" data-view="convert" data-i18n="nav_convert"></button></nav>
   <section id="view-scaler">
   <div class="grid">
     <div class="panel">
       <label for="file" data-i18n="in_file"></label>
-      <input type="file" id="file" accept=".svs,.tif,.tiff">
+      <div id="drop" class="drop" tabindex="0"><span data-i18n="drop_text"></span>
+        <input type="file" id="file" accept=".svs,.tif,.tiff,.btf,.tf8" hidden><div id="dropname" class="dropname"></div></div>
       <label for="url" data-i18n="in_url"></label>
       <input type="text" id="url" placeholder="testdata/....svs">
       <label for="mpp" data-i18n="in_mpp"></label>
@@ -99,6 +107,7 @@
   </div>
   <details><summary data-i18n="how_title"></summary><div data-i18n-html="how_html"></div></details>
   </section>
+  <section id="view-convert" class="panel conv" hidden><div data-i18n-html="conv_html"></div></section>
   <section id="view-form" hidden>
     <p class="status" data-i18n="nav_form_note"></p>
     <iframe id="formframe" title="Validation data form"></iframe>

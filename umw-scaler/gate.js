@@ -56,7 +56,7 @@ async function unlock(ev) {
 
 function showView(v) {
   document.querySelectorAll('.navbtn').forEach(b => b.classList.toggle('on', b.dataset.view === v));
-  g$('view-scaler').hidden = v !== 'scaler'; g$('view-form').hidden = v !== 'form';
+  ['scaler', 'form', 'convert'].forEach(x => { g$('view-' + x).hidden = v !== x; });
 }
 // UMW Scaler -> formularz (ten sam origin: wspólny localStorage 'umws_results' + postMessage)
 window.UMWS_toForm = slide => { showView('form'); const f = g$('formframe'); const go = () => f.contentWindow.postMessage({ type: 'umws_add', slide }, location.origin);
